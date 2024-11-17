@@ -1,15 +1,25 @@
 {
- "name": "@hexlet/code", 
+ "name": "@hexlet/code",
  "type": "module",
  "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Dizza19/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Dizza19/frontend-project-44/actions)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "bin": {
-  "brain-games": "bin/brain-games.js"
-},
-  "author": "",
-  "license": "ISC"
+ "description": "[![Actions Status](https://github.com/Dizza19/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Dizza19/frontend-project-44/actions)",
+ "main": "index.js",
+ "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "node bin/brain-games.js"
+ },
+ "bin": {
+  "brain-games": "bin/brain-games.js",
+  "brain-even": "bin/brain-even.js"
+ },
+ "author": "",
+ "license": "ISC",
+ "dependencies": {
+  "readline-sync": "^1.4.10"
+ },
+ "devDependencies": {
+  "@eslint/js": "^9.14.0",
+  "eslint": "^9.14.0",
+  "globals": "^15.12.0"
+ }
 }
