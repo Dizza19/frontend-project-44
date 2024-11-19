@@ -35,7 +35,7 @@ const playCalculator = () => {
         console.log(`Congratulations, ${nameUser}!`);
     }else {
         console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
-        console.log(`Let's try again, '${nameUser}'!`);
+        console.log(`Let's try again, ${nameUser}!`);
         return;
     }
     }
