@@ -3,4 +3,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/765ecb522066d1737f48/maintainability)](https://codeclimate.com/github/Dizza19/frontend-project-44/maintainability)
 
 
-[Ссылка на аскинему.](https://asciinema.org/a/QtXhLVKEKzkFRAGFXBMZadViL)
+[Ссылка на аскинему Brain-even.](https://asciinema.org/a/QtXhLVKEKzkFRAGFXBMZadViL)
+[Ссылка на аскинему Calc.js.](https://asciinema.org/a/GRQSlwNeOJmc2rCHfS5UdKIjS)
