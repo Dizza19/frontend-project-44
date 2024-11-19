@@ -1,8 +1,4 @@
 #!/usr/bin/env node
-import greetUser from './cli.js';
-import readlineSync from 'readline-sync';
+import playGame from '../src/games/brain-calc.js';
 
-const playCalculator = () => {
-        
-}
-
+playGame();
