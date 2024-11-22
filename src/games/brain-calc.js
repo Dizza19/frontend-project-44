@@ -8,8 +8,8 @@ const playCalculator = () => {
     console.log('What is the result of the expression?');
 
     for (let i = 0; i < 3; i+=1) {
-    const number1 = Math.floor(Math.random() * 100); 
-    const number2 = Math.floor(Math.random() * 100);
+    const number1 = Math.floor(Math.random() * 30); 
+    const number2 = Math.floor(Math.random() * 30);
      
     const operators = ['+', '-', '*'];
     const randomIndex = Math.floor(Math.random() * operators.length); 
