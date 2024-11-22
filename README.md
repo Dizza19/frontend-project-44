@@ -4,4 +4,4 @@
 
 
 [Ссылка на аскинему Brain-even.](https://asciinema.org/a/QtXhLVKEKzkFRAGFXBMZadViL)
-[Ссылка на аскинему Calc.js.](https://asciinema.org/a/GRQSlwNeOJmc2rCHfS5UdKIjS)
+[Ссылка на аскинему Calc.js.](https://asciinema.org/a/5CA361DLDmoSg2iNE7pCW4Ydb)
