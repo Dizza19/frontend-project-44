@@ -6,3 +6,4 @@
 [Ссылка на аскинему Brain-even.](https://asciinema.org/a/QtXhLVKEKzkFRAGFXBMZadViL)
 [Ссылка на аскинему Calc.js.](https://asciinema.org/a/5CA361DLDmoSg2iNE7pCW4Ydb)
 [Ссылка на аскинему brain-gcd.js](https://asciinema.org/a/uZdtWBVJzAj4KhIXK9jmCfzuN)
+[Ссылка на аскинему brain-progression.js](https://asciinema.org/a/p2ggaS0YLHXawzIfBElSGkxcp)
