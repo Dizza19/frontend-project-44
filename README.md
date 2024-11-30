@@ -7,4 +7,4 @@
 [Ссылка на аскинему Calc.js.](https://asciinema.org/a/5CA361DLDmoSg2iNE7pCW4Ydb)
 [Ссылка на аскинему brain-gcd.js](https://asciinema.org/a/uZdtWBVJzAj4KhIXK9jmCfzuN)
 [Ссылка на аскинему brain-progression.js](https://asciinema.org/a/p2ggaS0YLHXawzIfBElSGkxcp)
-[Ссылка на аскинему brain-prime.js](https://asciinema.org/a/fgbFu6Ec4cYOlvJSwtXQ37E8t)
+[Ссылка на аскинему brain-prime.js](https://asciinema.org/a/bK3VpfHUHNj47imiM3Cbw24rs)
