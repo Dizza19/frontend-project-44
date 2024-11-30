@@ -28,14 +28,13 @@ const primeNumber = () => {
 
 
     if (userAnswer === correctAnswer ){
-        console.log('Correct!');
-        console.log(`Congratulations, ${nameUser}!`); 
+        console.log('Correct!'); 
     }else {
         console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
         console.log(`Let's try again, ${nameUser}!`);
         return;
     }
 }
-
+    console.log(`Congratulations, ${nameUser}!`);
 }   
 export default primeNumber;

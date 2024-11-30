@@ -17,14 +17,14 @@ const playEven = () => {
     const correctAnswer = isEven ? 'yes' : 'no';
 
     if (answer === correctAnswer) {
-       console.log('Correct!');
-       console.log(`Congratulations, ${nameUser}!`);    
+       console.log('Correct!');   
     } else {
         console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
         console.log(`Let's try again, ${nameUser}!`);
         return;
     }
  }
+ console.log(`Congratulations, ${nameUser}!`); 
 };
 
 export default playEven;
