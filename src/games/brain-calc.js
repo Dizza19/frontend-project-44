@@ -38,7 +38,7 @@ const playCalculator = () => {
         return;
     }
     }
-    console.log(`Congratulations, ${nameUser}!`);
+    console.log(`Congratulations, ${nameUser}!`); 
 }
 export default playCalculator;
 
