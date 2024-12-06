@@ -1,6 +1,6 @@
 import greetUser from '../cli.js';
 import readlineSync from 'readline-sync';
-import { getRandomNumber } from './utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const generateProgression = () => {
   const nameUser = greetUser();
