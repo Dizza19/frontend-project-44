@@ -1,6 +1,6 @@
 import greetUser from '../cli.js';
 import readlineSync from 'readline-sync';
-import { getRandomNumber, getRandomIndex } from './utils.js';
+import { getRandomNumber, getRandomIndex } from '../utils.js';
 
 const playCalculator = () => {
   const nameUser = greetUser();
