@@ -2,7 +2,7 @@
  "name": "@hexlet/code",
  "type": "module",
  "version": "1.0.0",
- "description": "[![Actions Status](https://github.com/Dizza19/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Dizza19/frontend-project-44/actions)",
+ "description":"A set of five mini-games to practice frontend development skills and game logic.",
  "main": "index.js",
  "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",

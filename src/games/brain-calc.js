@@ -1,17 +1,17 @@
-#!/usr/bin/env node
 import greetUser from '../cli.js';
 import readlineSync from 'readline-sync';
+import { getRandomNumber, getRandomIndex } from './utils.js';
 
 const playCalculator = () => {
   const nameUser = greetUser();
   console.log('What is the result of the expression?');
 
   for (let i = 0; i < 3; i += 1) {
-    const number1 = Math.floor(Math.random() * 30);
-    const number2 = Math.floor(Math.random() * 30);
+    const number1 = getRandomNumber(1, 30);
+    const number2 = getRandomNumber(1, 30);
 
     const operators = ['+', '-', '*'];
-    const randomIndex = Math.floor(Math.random() * operators.length);
+    const randomIndex = getRandomIndex(operators); 
 
     const operator = operators[randomIndex];
     const expression = `${number1} ${operator} ${number2}`;
@@ -28,7 +28,7 @@ const playCalculator = () => {
       correctAnswer = number1 * number2;
     }
 
-    if (Math.abs(answer) === Math.abs(correctAnswer)) {
+    if (answer === correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);

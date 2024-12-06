@@ -1,9 +1,8 @@
-#!/usr/bin/env node
 import greetUser from '../cli.js';
 import readlineSync from 'readline-sync';
+import { getRandomNumber } from './utils.js';
 
 const isPrime = (number) => {
-  // Проверяем, простое ли число
   if (number <= 1) return false;
   for (let i = 2; i <= Math.sqrt(number); i += 1) {
     if (number % i === 0) return false;
@@ -13,11 +12,10 @@ const isPrime = (number) => {
 
 const primeNumber = () => {
   const nameUser = greetUser();
-
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   for (let i = 0; i < 3; i += 1) {
-    const number = Math.floor(Math.random() * 20) + 1;
+    const number = getRandomNumber(1, 20);
 
     console.log(`Question: ${number}`);
 

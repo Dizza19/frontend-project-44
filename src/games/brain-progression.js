@@ -1,31 +1,28 @@
-#!/usr/bin/env node
 import greetUser from '../cli.js';
 import readlineSync from 'readline-sync';
+import { getRandomNumber } from './utils.js';
 
 const generateProgression = () => {
   const nameUser = greetUser();
-
   console.log('What number is missing in the progression?');
-  
+
   for (let g = 0; g < 3; g += 1) {
-    const start = Math.floor(Math.random() * 20) + 1;
-    const step = Math.floor(Math.random() * 5) + 1;
+    const start = getRandomNumber(1, 20);
+    const step = getRandomNumber(1, 5);
     const length = 10;
     const array = [];
 
-    // Генерация прогрессии
     for (let i = 0; i < length; i += 1) {
       const number = start + i * step;
       array.push(number);
     }
 
-    // Скрываем один элемент прогрессии
-    const hiddenIndex = Math.floor(Math.random() * length);
+    const hiddenIndex = getRandomNumber(0, length - 1);
     const hiddenValue = array[hiddenIndex];
     array[hiddenIndex] = '..';
 
     console.log(`Question: ${array.join(' ')}`);
-    
+
     const userAnswer = Number(readlineSync.question('Your answer: '));
 
     if (userAnswer === hiddenValue) {
@@ -36,7 +33,7 @@ const generateProgression = () => {
       return;
     }
   }
-  
+
   console.log(`Congratulations, ${nameUser}!`);
 };
 

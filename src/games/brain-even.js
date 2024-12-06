@@ -1,15 +1,15 @@
-#!/usr/bin/env node
 import greetUser from '../cli.js';
 import readlineSync from 'readline-sync';
+import { getRandomNumber } from './utils.js';
 
 const playEven = () => {
   const nameUser = greetUser();
-
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let i = 0; i < 3; i += 1) {
-    const number = Math.floor(Math.random() * 100);
+    const number = getRandomNumber(1, 100);
     console.log(`Question: ${number}`);
+
     const answer = readlineSync.question('Your answer: ');
 
     const isEven = number % 2 === 0;
