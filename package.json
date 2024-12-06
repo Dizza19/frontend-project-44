@@ -2,11 +2,12 @@
  "name": "@hexlet/code",
  "type": "module",
  "version": "1.0.0",
- "description":"A set of five mini-games to practice frontend development skills and game logic.",
+ "description": "A set of five mini-games to practice frontend development skills and game logic.",
  "main": "index.js",
  "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "node bin/brain-games.js"
+  "start": "node bin/brain-games.js",
+  "lint": "eslint ."
  },
  "bin": {
   "brain-games": "bin/brain-games.js",
@@ -14,7 +15,7 @@
   "brain-calc": "bin/brain-calc.js",
   "brain-gcd": "bin/brain-gcd.js",
   "brain-progression": "bin/brain-progression.js",
-  "brain-prime":"bin/brain-prime.js"
+  "brain-prime": "bin/brain-prime.js"
  },
  "author": "",
  "license": "ISC",
@@ -23,7 +24,8 @@
  },
  "devDependencies": {
   "@eslint/js": "^9.14.0",
-  "eslint": "^9.14.0",
+  "eslint": "^9.16.0",
+  "eslint-config-airbnb-base": "^15.0.0",
   "globals": "^15.12.0"
  }
 }
