@@ -1,10 +1,10 @@
-import greetUser from '../cli.js';
-import readlineSync from 'readline-sync';
-import { getRandomNumber } from '../utils.js';
+import greetUser from "../cli.js";
+import readlineSync from "readline-sync";
+import { getRandomNumber } from "../utils.js";
 
 const findGCD = () => {
   const nameUser = greetUser();
-  console.log('Find the greatest common divisor of given numbers.');
+  console.log("Find the greatest common divisor of given numbers.");
 
   const gcd = (a, b) => {
     while (b !== 0) {
@@ -28,12 +28,14 @@ const findGCD = () => {
     console.log(`Question: ${a} ${b}`);
 
     const correctAnswer = gcd(a, b);
-    const userAnswer = Number(readlineSync.question('Your answer: '));
+    const userAnswer = Number(readlineSync.question("Your answer: "));
 
     if (userAnswer === correctAnswer) {
-      console.log('Correct!');
+      console.log("Correct!");
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+      );
       console.log(`Let's try again, ${nameUser}!`);
       return;
     }

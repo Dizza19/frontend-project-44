@@ -1,6 +1,6 @@
-import greetUser from '../cli.js';
-import readlineSync from 'readline-sync';
-import { getRandomNumber } from '../utils.js';
+import greetUser from "../cli.js";
+import readlineSync from "readline-sync";
+import { getRandomNumber } from "../utils.js";
 
 const isPrime = (number) => {
   if (number <= 1) return false;
@@ -19,14 +19,16 @@ const primeNumber = () => {
 
     console.log(`Question: ${number}`);
 
-    const userAnswer = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question("Your answer: ");
 
-    const correctAnswer = isPrime(number) ? 'yes' : 'no';
+    const correctAnswer = isPrime(number) ? "yes" : "no";
 
     if (userAnswer === correctAnswer) {
-      console.log('Correct!');
+      console.log("Correct!");
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+      );
       console.log(`Let's try again, ${nameUser}!`);
       return;
     }
