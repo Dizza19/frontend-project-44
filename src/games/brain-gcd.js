@@ -1,14 +1,16 @@
-import greetUser from "../cli.js";
-import readlineSync from "readline-sync";
-import { getRandomNumber } from "../utils.js";
+import readlineSync from 'readline-sync';
+import greetUser from '../cli.js';
+import { getRandomNumber } from '../utils.js';
 
 const findGCD = () => {
   const nameUser = greetUser();
-  console.log("Find the greatest common divisor of given numbers.");
+  console.log('Find the greatest common divisor of given numbers.');
 
-  const gcd = (a, b) => {
+  const gcd = (x, y) => {
+    let a = x;
+    let b = y;
     while (b !== 0) {
-      let temp = b;
+      const temp = b;
       b = a % b;
       a = temp;
     }
@@ -16,25 +18,22 @@ const findGCD = () => {
   };
 
   for (let i = 0; i < 3; i += 1) {
-    let a = getRandomNumber(1, 49);
-    let b = getRandomNumber(1, 49);
+    const num1 = getRandomNumber(1, 49);
+    const num2 = getRandomNumber(1, 49);
 
-    if (a < b) {
-      let temp = a;
-      a = b;
-      b = temp;
-    }
+    const a = Math.max(num1, num2);
+    const b = Math.min(num1, num2);
 
     console.log(`Question: ${a} ${b}`);
 
     const correctAnswer = gcd(a, b);
-    const userAnswer = Number(readlineSync.question("Your answer: "));
+    const userAnswer = Number(readlineSync.question('Your answer: '));
 
     if (userAnswer === correctAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
     } else {
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
       console.log(`Let's try again, ${nameUser}!`);
       return;

@@ -1,6 +1,6 @@
-import greetUser from "../cli.js";
-import readlineSync from "readline-sync";
-import { getRandomNumber } from "../utils.js";
+import readlineSync from 'readline-sync';
+import greetUser from '../cli.js';
+import { getRandomNumber } from '../utils.js';
 
 const playEven = () => {
   const nameUser = greetUser();
@@ -10,16 +10,16 @@ const playEven = () => {
     const number = getRandomNumber(1, 100);
     console.log(`Question: ${number}`);
 
-    const answer = readlineSync.question("Your answer: ");
+    const answer = readlineSync.question('Your answer: ');
 
     const isEven = number % 2 === 0;
-    const correctAnswer = isEven ? "yes" : "no";
+    const correctAnswer = isEven ? 'yes' : 'no';
 
     if (answer === correctAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
     } else {
       console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+        `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
       console.log(`Let's try again, ${nameUser}!`);
       return;
