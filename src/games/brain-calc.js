@@ -1,44 +1,33 @@
-import readlineSync from 'readline-sync';
-import greetUser from '../cli.js';
+import playGame from '../index.js';
 import { getRandomNumber, getRandomIndex } from '../utils.js';
 
-const playCalculator = () => {
-  const nameUser = greetUser();
-  console.log('What is the result of the expression?');
+const rules = 'What is the result of the expression?';
 
-  for (let i = 0; i < 3; i += 1) {
-    const number1 = getRandomNumber(1, 30);
-    const number2 = getRandomNumber(1, 30);
+const generateRound = () => {
+  const number1 = getRandomNumber(1, 30);
+  const number2 = getRandomNumber(1, 30);
+  const operators = ['+', '-', '*'];
+  const randomIndex = getRandomIndex(operators);
+  const operator = operators[randomIndex];
 
-    const operators = ['+', '-', '*'];
-    const randomIndex = getRandomIndex(operators);
+  const question = `${number1} ${operator} ${number2}`;
+  let correctAnswer;
 
-    const operator = operators[randomIndex];
-    const expression = `${number1} ${operator} ${number2}`;
-    console.log(`Question: ${expression}`);
-
-    const answer = Number(readlineSync.question('Your answer: '));
-
-    let correctAnswer;
-    if (operator === '+') {
-      correctAnswer = number1 + number2;
-    } else if (operator === '-') {
-      correctAnswer = number1 - number2;
-    } else if (operator === '*') {
-      correctAnswer = number1 * number2;
-    }
-
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
-      );
-      console.log(`Let's try again, ${nameUser}!`);
-      return;
-    }
+  switch (operator) {
+    case '+':
+      correctAnswer = String(number1 + number2);
+      break;
+    case '-':
+      correctAnswer = String(number1 - number2);
+      break;
+    case '*':
+      correctAnswer = String(number1 * number2);
+      break;
+    default:
+      throw new Error('Unknown operator');
   }
-  console.log(`Congratulations, ${nameUser}!`);
+
+  return [question, correctAnswer];
 };
 
-export default playCalculator;
+export default () => playGame(rules, generateRound);

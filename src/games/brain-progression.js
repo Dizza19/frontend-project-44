@@ -1,42 +1,23 @@
-import readlineSync from 'readline-sync';
-import greetUser from '../cli.js';
+import playGame from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
-const generateProgression = () => {
-  const nameUser = greetUser();
-  console.log('What number is missing in the progression?');
+const RULES = 'What number is missing in the progression?';
+const LENGTH = 10;
 
-  for (let g = 0; g < 3; g += 1) {
-    const start = getRandomNumber(1, 20);
-    const step = getRandomNumber(1, 5);
-    const length = 10;
-    const array = [];
+const generateRound = () => {
+  const start = getRandomNumber(1, 20);
+  const step = getRandomNumber(1, 5);
 
-    for (let i = 0; i < length; i += 1) {
-      const number = start + i * step;
-      array.push(number);
-    }
+  const progression = Array.from({ length: LENGTH }, (_, i) => start + i * step);
 
-    const hiddenIndex = getRandomNumber(0, length - 1);
-    const hiddenValue = array[hiddenIndex];
-    array[hiddenIndex] = '..';
+  const hiddenIndex = getRandomNumber(0, progression.length - 1);
+  const hiddenValue = progression[hiddenIndex];
+  progression[hiddenIndex] = '..';
 
-    console.log(`Question: ${array.join(' ')}`);
-
-    const userAnswer = Number(readlineSync.question('Your answer: '));
-
-    if (userAnswer === hiddenValue) {
-      console.log('Correct!');
-    } else {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${hiddenValue}'.`,
-      );
-      console.log(`Let's try again, ${nameUser}!`);
-      return;
-    }
-  }
-
-  console.log(`Congratulations, ${nameUser}!`);
+  const question = progression.join(' ');
+  return [question, String(hiddenValue)];
 };
 
-export default generateProgression;
+export default () => {
+  playGame(RULES, generateRound);
+};
