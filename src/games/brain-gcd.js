@@ -3,7 +3,7 @@ import { getRandomNumber } from '../utils.js';
 
 const RULES = 'Find the greatest common divisor of given numbers.';
 
-const gcd = (larger, smaller) => {
+const getGcd = (larger, smaller) => {
   let a = larger;
   let b = smaller;
   while (b !== 0) {
@@ -15,14 +15,11 @@ const gcd = (larger, smaller) => {
 };
 
 const generateRound = () => {
-  const num1 = getRandomNumber(1, 49);
-  const num2 = getRandomNumber(1, 49);
+  const number1 = getRandomNumber(1, 49);
+  const number2 = getRandomNumber(1, 49);
 
-  const largerNumber = Math.max(num1, num2);
-  const smallerNumber = Math.min(num1, num2);
-
-  const question = `${largerNumber} ${smallerNumber}`;
-  const correctAnswer = gcd(largerNumber, smallerNumber);
+  const question = `${number1} ${number2}`;
+  const correctAnswer = getGcd(number1, number2);
   return [question, String(correctAnswer)];
 };
 
